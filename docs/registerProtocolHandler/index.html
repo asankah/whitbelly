@@ -1,0 +1,22 @@
+CTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>registerProtocolHandler</title>
+  <script>
+    window.addEventListener("load", function(e) {
+      var b = document.getElementById("regButton");
+      b.addEventListener("click", function(e) {
+        var s = document.getElementById("scheme");
+        navigator.registerProtocolHandler(s.value, "https://asankah.github.io/whitbelly/?%s", "Test Handler");
+      });
+    });
+  </script>
+  </head>
+  <body>
+    <h1>registerProtocolHandler</h1>
+    Scheme :<input name="Scheme" value="dweb" id="scheme" /> <p>
+    <input type="button" name="Register" id="regButton" />
+  </body>
+</html>
+
